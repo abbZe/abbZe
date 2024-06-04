@@ -1,4 +1,4 @@
-```
+```typescript
 interface IFullstackDev {
     name: string;
     role: string;
