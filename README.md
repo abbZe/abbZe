@@ -1,5 +1,5 @@
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.png?v=101)
+![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 
 ```typescript
 interface IFullstackDev {
