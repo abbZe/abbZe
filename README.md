@@ -3,9 +3,10 @@ interface IFullstackDev {
     name: string;
     role: string;
     languages: string[];
+    greetings: () => string;
 }
 
-interface IOpts {
+interface IFullstackDevOpts {
     name: string;
     role: string;
     languages: string[];
@@ -16,19 +17,19 @@ class FullstackDev implements IFullstackDev {
     role: string;
     languages: string[];
 
-    constructor({ name, role, languages }: IOpts) {
+    constructor({ name, role, languages }: IFullstackDevOpts) {
         this.name = name;
         this.role = role;
         this.languages = languages;
     }
 
     greetings() {
-        return `Благодарю за посещение моего профиля,
+        return `Благодарю за посещение профиля ${this.name},
                 надеюсь вы нашли что-то интересное для себя :)`;
     }
 }
 
-const opts: IOpts = {
+const opts: IFullstackDevOpts = {
     name: 'Dmitrii',
     role: 'Fullstack Dev',
     languages: ['ru_RU', 'en_US'],
@@ -36,5 +37,6 @@ const opts: IOpts = {
 
 const fullStackDevDima = new FullstackDev(opts);
 
-fullStackDevDima.greetings();
+console.log(fullStackDevDima.greetings());
+
 ```
