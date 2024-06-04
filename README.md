@@ -1,5 +1,6 @@
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
-![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.png?v=101)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]
+
+[![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.png?v=101)]
 
 ```typescript
 interface IFullstackDev {
@@ -32,14 +33,13 @@ class FullstackDev implements IFullstackDev {
     }
 }
 
-const opts: IFullstackDevOpts = {
+const dimaOpts: IFullstackDevOpts = {
     name: 'Dmitrii',
     role: 'Fullstack Dev',
     languages: ['ru_RU', 'en_US'],
 };
 
-const fullStackDevDima = new FullstackDev(opts);
+const fullStackDevDima = new FullstackDev(dimaOpts);
 
 console.log(fullStackDevDima.greetings());
-
 ```
