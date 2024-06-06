@@ -1,3 +1,5 @@
+#Intro
+
 ![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.svg?v=101)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=abbZe.abbZe)
@@ -43,3 +45,21 @@ const fullStackDevDima = new FullstackDev(dimaOpts);
 
 console.log(fullStackDevDima.greetings());
 ```
+
+#My library
+| Book | Author | Was read?
+| ----------- | Common | ----------- |
+| Clean Code | Robert Martin | [x] |
+| Clean Architecture | Robert Martin | [x] |
+| Code Complete| Steve McConnel | [x] |
+| Extreme programming | Kent Beck | [x] | 
+| JavaScript Patterns | Stoyan Stefanov | [x] |
+| Clean Agile: Back to Basics | Robert Martin | [x] |
+| The Clean Coder | Robert Martin | [x] |
+| Functional Programming in JavaScript | Luis Atencio | [x] |
+| ----------- | DB | ----------- |
+| High Performance MySQL | Botros, Tinley | [x] |
+| SQL Queries for Mere Mortals | Martin Graber | [x] |
+| Introduction to Database Systems | C.J.Date | [x] |
+| Базы данных: проектирование, программирование, управление и администрирование | В.К.Волк | [x] |
+| Database Processing | David M. Kroenke | [x] |
