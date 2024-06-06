@@ -1,4 +1,4 @@
-[Welocome to my profile!](https://github.com/abbZe/profile-images/blob/main/welcome.png?raw=true)
+![Welcome to my profile!](https://github.com/abbZe/profile-images/blob/main/welcome.png?raw=true)
 
 ![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.svg?v=101)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
