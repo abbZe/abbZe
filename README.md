@@ -48,19 +48,18 @@ console.log(fullStackDevDima.greetings());
 
 # My library
 
-| Book                                           | Author                       | Was read? |
-|------------------------------------------------|------------------------------|-----------|
-| Clean Code                                     | Robert Martin                | [x]       |
-| Clean Architecture                             | Robert Martin                | [x]       |
-| Code Complete                                  | Steve McConnel               | [x]       |
-| Extreme Programming                            | Kent Beck                    | [x]       |
-| JavaScript Patterns                            | Stoyan Stefanov              | [x]       |
-| Clean Agile: Back to Basics                    | Robert Martin                | [x]       |
-| The Clean Coder                                | Robert Martin                | [x]       |
-| Functional Programming in JavaScript           | Luis Atencio                 | [x]       |
-| **Database Books**                             |                              |           |
-| High Performance MySQL                         | Botros, Tinley               | [x]       |
-| SQL Queries for Mere Mortals                   | Martin Graber                | [x]       |
-| Introduction to Database Systems               | C.J. Date                    | [x]       |
-| Базы данных: проектирование, программирование, управление и администрирование | В.К. Волк | [x]       |
-| Database Processing                            | David M. Kroenke             | [x]       |
+| Book                                           | Author                       | Category |
+|------------------------------------------------|------------------------------|----------|
+| Clean Code                                     | Robert Martin                | Common   |
+| Clean Architecture                             | Robert Martin                | Common   |
+| Code Complete                                  | Steve McConnel               | Common   |
+| Extreme Programming                            | Kent Beck                    | Common   |
+| JavaScript Patterns                            | Stoyan Stefanov              | Common   |
+| Clean Agile: Back to Basics                    | Robert Martin                | Common   |
+| The Clean Coder                                | Robert Martin                | Common   |
+| Functional Programming in JavaScript           | Luis Atencio                 | Common   |
+| High Performance MySQL                         | Botros, Tinley               | DB       |
+| SQL Queries for Mere Mortals                   | Martin Graber                | DB       |
+| Introduction to Database Systems               | C.J. Date                    | DB       |
+| Базы данных                                    | В.К. Волк                    | DB       |
+| Database Processing                            | David M. Kroenke             | DB       |
