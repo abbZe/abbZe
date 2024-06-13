@@ -2,6 +2,7 @@
 
 ![TypeScript](https://badges.frapsoft.com/typescript/love/typescript.svg?v=101)
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
+![Fedora linux](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=abbZe.abbZe)
 
 ```typescript
