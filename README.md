@@ -6,20 +6,17 @@
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=abbZe.abbZe)
 
 ```typescript
-interface IFullstackDev {
-    name: string;
-    role: string;
-    languages: string[];
+interface IDev {
     greetings: () => string;
 }
 
-interface IFullstackDevOpts {
+interface IDevOpts {
     name: string;
     role: string;
     languages: string[];
 }
 
-class FullstackDev implements IFullstackDev {
+class FullstackDev implements IDev {
     name: string;
     role: string;
     languages: string[];
@@ -36,7 +33,7 @@ class FullstackDev implements IFullstackDev {
     }
 }
 
-const dimaOpts: IFullstackDevOpts = {
+const dimaOpts: IDevOpts = {
     name: 'Dmitrii',
     role: 'Fullstack Dev',
     languages: ['ru_RU', 'en_US'],
