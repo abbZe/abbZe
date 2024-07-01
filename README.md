@@ -5,7 +5,12 @@
 ![Fedora linux](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=abbZe.abbZe)
 
+## Мое оригинальное приветствие, демонстрирующее принципы SOLID :)
 ```typescript
+/**
+ * (S) единая ответственность
+ * (I) специфичность интерфейса
+ */ 
 interface IDev {
     greetings: () => string;
 }
@@ -13,35 +18,44 @@ interface IDev {
 interface IDevOpts {
     name: string;
     role: string;
-    languages: string[];
+    languages: Languages[];
 }
 
-class FullstackDev implements IDev {
-    name: string;
-    role: string;
-    languages: string[];
+enum Languages {
+    RU = 'ru_RU',
+    EN = 'en_US'
+}
 
-    constructor({ name, role, languages }: IFullstackDevOpts) {
+/**
+ * (O) Открыт для расширения, закрыт для модификации
+ * (L) Не демонстрирую напрямую, так как нужен наследник, но FullStackDev можно заменить любым классом, наследующимся от IDev
+ * (D) Опции не захардкожены, а инжектированы (обычно демонстрация идет на классах, но тут опции пусть будут)
+ */ 
+class FullStackDev implements IDev {
+    public readonly name: string;
+    public readonly role: string;
+    public readonly languages: Languages[];
+
+    constructor({ name, role, languages }: IDevOpts) {
         this.name = name;
         this.role = role;
         this.languages = languages;
     }
 
-    greetings() {
-        return `Благодарю за посещение профиля ${this.name},
-                надеюсь вы нашли что-то интересное для себя :)`;
+    public greetings() {
+        return `Благодарю за посещение профиля ${this.name}, надеюсь вы нашли что-то интересное для себя :)`;
     }
 }
 
+
 const dimaOpts: IDevOpts = {
-    name: 'Dmitrii',
+    name: 'Дмитрий',
     role: 'Fullstack Dev',
-    languages: ['ru_RU', 'en_US'],
+    languages: [Languages.RU, Languages.EN], // Использование перечисления для языков
 };
 
-const fullStackDevDima = new FullstackDev(dimaOpts);
-
-console.log(fullStackDevDima.greetings());
+const fullStackDevDima: IDev = new FullStackDev(dimaOpts);
+console.log(fullStackDevDima.greetings())
 ```
 
 # My library
