@@ -5,14 +5,16 @@
 ![Fedora linux](https://img.shields.io/badge/Fedora-294172?style=for-the-badge&logo=fedora&logoColor=white)
 ![visitors](https://visitor-badge.laobi.icu/badge?page_id=abbZe.abbZe)
 
-## Мое оригинальное приветствие, демонстрирующее принципы SOLID :)
+# Мое оригинальное приветствие, демонстрирующее принципы SOLID :)
 ```typescript
-/**
- * (S) единая ответственность
- * (I) специфичность интерфейса
- */ 
+enum Languages {
+    RU = 'ru_RU',
+    EN = 'en_US',
+}
+
 interface IDev {
-    greetings: () => string;
+    greetings(): string;
+    doJob(): void;
 }
 
 interface IDevOpts {
@@ -21,17 +23,7 @@ interface IDevOpts {
     languages: Languages[];
 }
 
-enum Languages {
-    RU = 'ru_RU',
-    EN = 'en_US'
-}
-
-/**
- * (O) Открыт для расширения, закрыт для модификации
- * (L) Не демонстрирую напрямую, так как нужен наследник, но FullStackDev можно заменить любым классом, наследующимся от IDev
- * (D) Опции не захардкожены, а инжектированы (обычно демонстрация идет на классах, но тут опции пусть будут)
- */ 
-class FullStackDev implements IDev {
+abstract class Dev implements IDev {
     public readonly name: string;
     public readonly role: string;
     public readonly languages: Languages[];
@@ -42,20 +34,53 @@ class FullStackDev implements IDev {
         this.languages = languages;
     }
 
-    public greetings() {
+    public greetings(): string {
         return `Благодарю за посещение профиля ${this.name}, надеюсь вы нашли что-то интересное для себя :)`;
     }
+
+    abstract doJob(): void;
 }
 
+class FullStackDev extends Dev {
+    constructor(opts: IDevOpts) {
+        super(opts);
+    }
 
-const dimaOpts: IDevOpts = {
+    public doJob = () => {
+        console.log(`Работаю над фронтендом и бэкэндом, моё имя ${this.name}`);
+    };
+}
+
+class FrontendDev extends Dev {
+    constructor(opts: IDevOpts) {
+        super(opts);
+    }
+
+    public doJob = () => {
+        console.log(`Работаю над фронтендом, моё имя ${this.name}`);
+    };
+}
+
+const dimaOpts = {
     name: 'Дмитрий',
     role: 'Fullstack Dev',
-    languages: [Languages.RU, Languages.EN], // Использование перечисления для языков
+    languages: [Languages.RU, Languages.EN],
 };
 
-const fullStackDevDima: IDev = new FullStackDev(dimaOpts);
-console.log(fullStackDevDima.greetings())
+const annaOpts = {
+    name: 'Анна',
+    role: 'Frontend Dev',
+    languages: [Languages.RU],
+};
+
+const dima = new FullStackDev(dimaOpts);
+const anna = new FrontendDev(annaOpts);
+
+console.log(dima.greetings());
+console.log(anna.greetings());
+
+console.log(dima.doJob());
+console.log(anna.doJob());
 ```
 
 # My library
