@@ -12,6 +12,12 @@ enum Languages {
     EN = 'en_US',
 }
 
+enum Roles {
+    FULLSTACK = 'FullStack',
+    FRONTEND = 'Frontend',
+    BACKEND = 'Backend',
+}
+
 interface IDev {
     greetings(): string;
     doJob(): void;
@@ -19,13 +25,13 @@ interface IDev {
 
 interface IDevOpts {
     name: string;
-    role: string;
+    role: Roles;
     languages: Languages[];
 }
 
 abstract class Dev implements IDev {
     public readonly name: string;
-    public readonly role: string;
+    public readonly role: Roles;
     public readonly languages: Languages[];
 
     constructor({ name, role, languages }: IDevOpts) {
@@ -63,13 +69,13 @@ class FrontendDev extends Dev {
 
 const dimaOpts = {
     name: 'Дмитрий',
-    role: 'Fullstack Dev',
+    role: Roles.FULLSTACK,
     languages: [Languages.RU, Languages.EN],
 };
 
 const annaOpts = {
     name: 'Анна',
-    role: 'Frontend Dev',
+    role: Roles.FRONTEND,
     languages: [Languages.RU],
 };
 
@@ -81,6 +87,7 @@ console.log(anna.greetings());
 
 console.log(dima.doJob());
 console.log(anna.doJob());
+
 ```
 
 # My library
